@@ -142,6 +142,9 @@ class PickerActivity : AppCompatActivity(), DataCallback, View.OnClickListener {
 
             override fun openCameraWin() {
                 println("准备启动拍照或拍视频窗口")
+                val intent = Intent()
+                setResult(PickerConfig.RESULT_CAMERA_EXTRA, intent)
+                finish()
             }
         })
     }
